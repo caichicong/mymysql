@@ -282,7 +282,7 @@ func readDuration(rd io.Reader) time.Duration {
 	case 5:
 		// Day part
 		tt += int64(DecodeU32(buf[1:5])) * (24 * 3600 * 1e9)
-		fallthrough
+		
 	}
 	if buf[0] != 0 {
 		tt = -tt
